@@ -130,6 +130,7 @@
 	.Screen/y DEI2k #000a ADD2 ROT DEO2
 	JMP2r
 
+( stolen from neauoire )
 @theme ( -- )
 	;&file .File1/name DEO2
 	#0002 .File1/length DEO2
