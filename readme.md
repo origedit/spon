@@ -1,3 +1,5 @@
+![sample image](sample.png)
+
 you need [uxn](https://100r.co/site/uxn.html) to run this.
 
 # usage
