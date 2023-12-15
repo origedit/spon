@@ -1,0 +1,249 @@
+@dict
+
+=&a =&akesi =&ala =&alasa =&ale =&anpa =&ante =&ante =&anu =&awen
+=&e =&en =&esun
+=&ijo =&ike =&ilo =&insa
+=&jaki =&jan =&jelo =&jo
+=&kala =&kalama =&kama =&kasi =&ken =&kepeken =&kili =&kiwen =&kijetesantakalu =&ko =&kon =&kule =&kulupu =&kute
+=&la =&lape =&laso =&lawa =&len =&lete =&li =&lili =&linja =&lipu =&loje =&lon =&luka =&lukin =&lupa
+=&ma =&mama =&mani =&meli =&mije =&mi =&moku =&moli =&monsi =&mu =&mun =&musi =&mute
+=&nanpa =&nasa =&nasin =&nena =&ni =&nimi =&noka
+=&o =&olin =&ona =&open
+=&pakala =&pali =&palisa =&pan =&pana =&pi =&pilin =&pimeja =&pini =&pipi =&poka =&poki =&pona =&pu
+=&sama =&seli =&selo =&sewi =&sijelo =&sike =&sin =&sina =&sinpin =&sitelen =&sona =&soweli
+=&kiwen
+=&suli =&suno =&supa =&suwi =&seme
+ =&tan =&taso =&tawa =&telo =&tenpo =&toki =&tomo =&tu
+=&unpa =&uta =&utala
+=&walo =&wan =&waso =&wawa =&weka =&wile
+=&namako =&kin =&oko =&kipisi =&leko =&monsuta =&tonsi =&jasima =&soko =&meso =&lanpan =&n =&misikeke =&ku =&majuna 0000
+
+&a 01 "a $1
+&akesi 02 "akesi $1
+&ala 03 "ala $1
+&alasa 04 "alasa $1
+&ale 05 "ale $1
+&anpa 06 "anpa $1
+&ante 07 "ante $1
+&anu 08 "anu $1
+&awen 09 "awen $1
+&e 0a "e $1
+&en 0b "en $1
+&esun 0c "esun $1
+&ijo 0d "ijo $1
+&ike 0e "ike $1
+&ilo 0f "ilo $1
+&insa 10 "insa $1
+&jaki 11 "jaki $1
+&jan 12 "jan $1
+&jelo 13 "jelo $1
+&jo 14 "jo $1
+&kala 15 "kala $1
+&kalama 16 "kalama $1
+&kama 17 "kama $1
+&kasi 18 "kasi $1
+&ken 19 "ken $1
+&kepeken 1a "kepeken $1
+&kili 1b "kili $1
+&ko 1c "ko $1
+&kon 1d "kon $1
+&kule 1e "kule $1
+&kulupu 1f "kulupu $1
+&kute 20 "kute $1
+&la 21 "la $1
+&lape 22 "lape $1
+&laso 23 "laso $1
+&lawa 24 "lawa $1
+&len 25 "len $1
+&lete 26 "lete $1
+&li 27 "li $1
+&lili 28 "lili $1
+&linja 29 "linja $1
+&lipu 2a "lipu $1
+&loje 2b "loje $1
+&lon 2c "lon $1
+&luka 2d "luka $1
+&lukin 2e "lukin $1
+&lupa 2f "lupa $1
+&ma 30 "ma $1
+&mama 31 "mama $1
+&mani 32 "mani $1
+&meli 33 "meli $1
+&mi 87 "mi $1
+&mije 34 "mije $1
+&moku 35 "moku $1
+&moli 36 "moli $1
+&monsi 37 "monsi $1
+&mu 38 "mu $1
+&mun 39 "mun $1
+&musi 3a "musi $1
+&mute 3b "mute $1
+&nanpa 3c "nanpa $1
+&nasa 3d "nasa $1
+&nasin 3e "nasin $1
+&nena 3f "nena $1
+&ni 40 "ni $1
+&nimi 41 "nimi $1
+&noka 42 "noka $1
+&o 43 "o $1
+&olin 44 "olin $1
+&ona 45 "ona $1
+&open 46 "open $1
+&pakala 47 "pakala $1
+&pali 48 "pali $1
+&palisa 49 "palisa $1
+&pan 4a "pan $1
+&pana 4b "pana $1
+&pi 4c "pi $1
+&pilin 4d "pilin $1
+&pimeja 4e "pimeja $1
+&pini 4f "pini $1
+&pipi 50 "pipi $1
+&poka 51 "poka $1
+&poki 52 "poki $1
+&pona 53 "pona $1
+&pu 54 "pu $1
+&sama 55 "sama $1
+&seli 56 "seli $1
+&selo 57 "selo $1
+&sewi 58 "sewi $1
+&sijelo 59 "sijelo $1
+&sike 5a "sike $1
+&sin 5b "sin $1
+&sina 5c "sina $1
+&sinpin 5d "sinpin $1
+&sitelen 5e "sitelen $1
+&sona 5f "sona $1
+&soweli 60 "soweli $1
+&seme 88 "seme $1
+&kiwen 61 "kiwen $1
+&suli 62 "suli $1
+&suno 63 "suno $1
+&supa 64 "supa $1
+&suwi 65 "suwi $1
+&tan 66 "tan $1
+&taso 67 "taso $1
+&tawa 68 "tawa $1
+&telo 69 "telo $1
+&tenpo 6a "tenpo $1
+&toki 6b "toki $1
+&tomo 6c "tomo $1
+&tu 6d "tu $1
+&unpa 6e "unpa $1
+&uta 6f "uta $1
+&utala 70 "utala $1
+&walo 71 "walo $1
+&wan 72 "wan $1
+&waso 73 "waso $1
+&wawa 74 "wawa $1
+&weka 75 "weka $1
+&wile 76 "wile $1
+&namako 77 "namako $1
+&kin 78 "kin $1
+&oko 79 "oko $1
+&kipisi 7a "kipisi $1
+&leko 7b "leko $1
+&monsuta 7c "monsuta $1
+&tonsi 7d "tonsi $1
+&jasima 7e "jasima $1
+&kijetesantakalu 7f "kijetesantakalu $1
+&soko 80 "soko $1
+&meso 81 "meso $1
+&lanpan 82 "lanpan $1
+&n 83 "n $1
+&misikeke 84 "misikeke $1
+&ku 85 "ku $1
+&majuna 86 "majuna $1
+&te 89
+&to 8a
+&dot 8b
+
+&icn
+
+0000 0000 0000 0000 1010 1000 1028 3400
+4438 44fe 447c ba00 8244 2810 2844 8200
+6050 54fe 5450 6000 0044 aa92 aa44 0000
+0082 82fe 0038 3800 4428 1000 1028 4400
+8244 2810 1010 1000 1028 2844 4428 ee00
+0088 4422 4488 0000 1010 10fe 1010 1000
+0e92 7c10 7894 e200 3844 8282 8244 3800
+0000 3844 8282 0000 fe92 9292 fe10 1000
+0038 ba82 82fe 0000 fefe bad6 baee fe00
+3844 4444 3844 8200 1038 6c38 1028 4400
+1c34 5880 9e82 7c00 008c 5222 528c 0000
+9254 00fe 8282 7c00 2030 2824 2224 e800
+0c12 7294 d830 1000 4444 4870 4844 4400
+7c54 101c 22a2 6200 107c 9282 8282 7c00
+1c22 c282 8252 6c00 2448 4844 2424 4800
+1010 28fe 4482 fe00 3828 3800 eeaa ee00
+3844 0222 2408 3000 3008 0404 0408 3000
+0000 0efa 0e00 0000 6c54 3810 2844 fe00
+7884 9ee6 8484 7800 fe82 8282 9ef2 9200
+4444 28fe 2844 4400 4020 1008 1020 4000
+0000 0028 1000 0000 0000 0c92 9260 0000
+fc82 8282 8282 fe00 7c44 3810 2844 fe00
+0000 3838 00fe 0000 1c22 2222 a262 2200
+007c ba38 827c 0000 4444 4444 4444 3800
+3854 92fe 9254 3800 7c82 8282 7c28 3800
+0082 ba44 4444 3800 7ce6 c6c6 3844 8200
+3844 4444 28fe 8200 7c44 381c 22a2 6200
+0000 aa44 aa00 7c00 0e08 6868 6808 0e00
+44aa ba44 5444 3800 3864 1212 1264 3800
+eeaa ee44 4444 3800 9292 9292 9292 8200
+2828 fe28 fe28 2800 3840 9caa 9244 3800
+1010 1038 5410 1000 3844 8282 8282 8200
+1010 1010 5438 1000 0000 7c82 827c 0000
+9090 909c 8282 fc00 1010 1000 3828 3800
+6c92 446c 9244 3800 0000 0c92 523c 0000
+8282 8282 fe82 fe00 fe92 a2ba 8a92 fe00
+3828 381c 22a2 6200 1028 2828 2828 1000
+1028 1028 106c 1000 2a00 1c22 22a2 6200
+8080 8080 8080 fe00 6c92 8282 4428 1000
+1010 3828 546c fe00 7c10 1010 1010 7c00
+2800 7c10 7c10 7c00 0090 9696 96f0 0000
+8282 8282 8282 fe00 0000 8282 4438 0000
+fe82 82aa 9282 fe00 00fe 0000 00fe 0000
+1010 9254 5400 1000 00fe aaaa aaaa aa00
+0202 0a0a 2aaa d200 fe92 9292 9292 9200
+3844 baaa ba44 3800 1010 1000 ee00 0000
+1020 4070 4848 3000 f010 1616 1610 f000
+fe82 9282 aa82 fe00 5400 7c44 4444 7c00
+0402 2a02 aca8 a800 3844 8282 4428 1000
+8282 4444 2828 1000 1038 44c6 4438 1000
+0000 00fe 4444 4400 0044 aa00 0010 0000
+0000 009c a2c2 f000 0808 0878 0808 0800
+0818 2848 8848 2e00 0072 8c00 629c 0000
+3844 9292 9a44 3800 5400 3844 4444 3800
+1028 4482 8282 fe00 4444 4444 4444 4400
+6c92 aaaa 7c28 1000 00fe 8282 7c00 1000
+8244 2810 aa44 0000 1010 28aa 4444 fe00
+1030 5010 1010 1000 1008 5402 0e08 0800
+8282 92aa aaaa 9200 8244 2800 2844 8200
+4482 8282 9292 6c00 1010 10c6 1010 1000
+1010 1000 2830 2800 1020 5090 5020 1000
+c2c4 0810 2046 8600 fe82 baaa ba82 fe00
+0000 28aa 5454 1000 00ba 4444 4438 1000
+109c 7210 9c72 1000 0c14 2246 c4a4 f400
+3844 8282 fe28 3800 8282 8292 8282 8200
+1c34 5c80 9c62 0800 1010 1000 3028 2800
+3844 447c 4444 3800 fe82 bea2 aaa2 fe00
+0000 ee00 1010 1000 3048 4870 4020 1000
+7c82 020c 1000 1000 3c40 4040 4040 3c00
+7804 0404 0404 7800 0000 3828 3800 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+6c92 9292 9292 9200 8282 8292 9292 6c00
+3c42 4242 7c40 4000 fe10 1010 1010 1000
+7c82 8282 8282 8200 7c80 807c 0202 fc00
+3010 1010 1010 0c00 8284 88f8 8482 8200
+fe08 0808 0888 7000 1000 7010 1010 7c00
+7c82 82fc 8082 7c00 8282 8282 8282 7c00
+7c82 8282 8282 7c00 7c02 027e 8282 7e00

@@ -1,0 +1,148 @@
+|00 @System &catch $2 &expansion $2 &pad $2 &metadata $2 &r $2 &g $2 &b $2 &debug $1 &state $1
+|10 @Console &vector $2 &read $1 &pad $4 &type $1 &write $1 &error $1
+|20 @Screen &vector $2 &width $2 &height $2 &auto $1 &pad $1 &x $2 &y $2 &addr $2 &pixel $1 &sprite $1
+|a0 @File1 &vector $2 &success $2 &stat $2 &delete $1 &append $1 &name $2 &length $2 &read $2 &write $2
+
+|00
+
+@wlen $1
+@space $1
+
+|0100
+	#0064 .Screen/width DEO2
+	#0044 .Screen/height DEO2
+	#0002 .Screen/x DEO2
+	#0002 .Screen/y DEO2
+	#f001 .System/r DEO2
+	#f003 .System/g DEO2
+	#e006 .System/b DEO2
+	theme
+	#00 .wlen STZ
+	;on-char .Console/vector DEO2
+	BRK
+
+@on-char ( -> )
+	.Console/read DEI
+	DUP #0a EQU ?&new-line
+	DUP is-space ?&space
+	DUP #20 GTH ?{ POP BRK }
+	DUP is-letter ?&word
+	DUP [ LIT ": ] EQU ?&debug
+	DUP [ LIT ". ] EQU ?&dot
+	DUP [ LIT "" ] EQU ?&lit
+	DUP [ LIT "( ] EQU ?&te
+	DUP [ LIT ") ] EQU ?&to
+	POP
+	BRK
+&word ( c -> )
+	append ?{ got-word } BRK
+&space ( c -> )
+	POP got-word
+	.space LDZ #00 EQU ?{ #00 draw }
+	[ LIT2 01 -space ] STZ
+	BRK
+&new-line ( c -> )
+	POP got-word draw/new-line BRK
+&dot ( c -> )
+	POP got-word [ LIT2 00 -space ] STZ ;dict/dot LDA draw BRK
+&lit ( c -> )
+	POP draw-letters BRK
+&te ( c -> )
+	POP got-word ;dict/te LDA draw BRK
+&to ( c -> )
+	POP got-word ;dict/to LDA draw BRK
+&debug ( c -> )
+	POP BRK
+
+@is-space ( c -- flag )
+	STH ;&c & ( c* | r: c )
+	LDAk ?{ POP2 POPr #00 JMP2r }
+	LDAk STHrk EQU ?&found
+	INC2 !&
+&found ( c* | r: c -- 1 )
+	POP2 POPr #01 JMP2r
+&c 20 0a 09 $1
+
+@is-letter ( c -- flag )
+	DUP #61 LTH ?&no
+	DUP #7a GTH ?&no
+	POP #01 JMP2r
+&no
+	POP #00 JMP2r
+
+@append ( c -- success )
+	.wlen LDZ DUP #20 LTH ?{ POP2 #00 JMP2r }
+	#00 SWP ;word ADD2 STA
+	.wlen LDZk INC SWP STZ
+	#01 JMP2r
+
+@got-word ( -- )
+	.wlen LDZ ?{ JMP2r }
+	[ LIT2 00 -space ] STZ
+	#00 ;word [ LIT2 00 -wlen ] LDZ ADD2 STA
+	#00 .wlen STZ
+	look DUP ?{ POP draw-letters JMP2r } draw
+	JMP2r
+
+@draw-letters ( -- )
+	#00 .wlen STZ
+	[ LIT2 00 -space ] STZ
+	;word &
+	LDAk ?{ POP2 JMP2r }
+	LDAk draw-letters/letter
+	INC2 !&
+&letter ( c -- )
+	STH ;&letters &c ( letter* | r: c )
+	LDAk ?{ POP2 POPr #11 draw JMP2r }
+	LDAk STHrk EQU ?&found
+	INC2 !&c
+&found ( letter* | r: c -- )
+	POPr ;&letters SUB2 NIP #a0 ADD draw JMP2r
+&letters "mwptnslkjieuoa $1
+
+@look ( -- tile )
+	;dict &
+		LDA2k OVR ?{ POP2 POP2 #00 JMP2r }
+		INC2k match ?&found
+		POP2 INC2 INC2 !&
+&found ( word* data* -- )
+	NIP2 
+	LDA
+	JMP2r
+
+@match ( s* -- flag )
+	LIT2r =word &
+	LDAk LDArk STHr
+		NEQk ?&no
+		ORA ?{ POP2 POP2r #01 JMP2r }
+	INC2 INC2r !&
+&no ( s* c c | r: word* -- 0 )
+	POP2 POP2 POP2r #00 JMP2r
+
+@draw ( id -- )
+	#00 SWP #30 SFT2 ;dict/icn ADD2 .Screen/addr DEO2
+	#03 .Screen/sprite DEO
+	.Screen/x DEI2k #0008 ADD2 ROT DEO2
+	.Screen/x DEI2 #000a ADD2 .Screen/width DEI2 GTH2 ?&new-line
+	JMP2r
+&new-line ( -- )
+	#0002 .Screen/x DEO2
+	.Screen/y DEI2k #000a ADD2 ROT DEO2
+	JMP2r
+
+@theme ( -- )
+	;&file .File1/name DEO2
+	#0002 .File1/length DEO2
+	;&r .File1/read DEO2
+	;&g .File1/read DEO2
+	;&b .File1/read DEO2
+	.File1/success DEI2 ORA ?&set JMP2r &set
+	[ LIT2 &r $2 ] .System/r DEO2
+	[ LIT2 &g $2 ] .System/g DEO2
+	[ LIT2 &b $2 ] .System/b DEO2
+	JMP2r
+&file ".theme 00
+
+@word $20
+
+~dict.tal
