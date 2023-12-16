@@ -1,6 +1,7 @@
 |00 @System &catch $2 &expansion $2 &pad $2 &metadata $2 &r $2 &g $2 &b $2 &debug $1 &state $1
 |10 @Console &vector $2 &read $1 &pad $4 &type $1 &write $1 &error $1
 |20 @Screen &vector $2 &width $2 &height $2 &auto $1 &pad $1 &x $2 &y $2 &addr $2 &pixel $1 &sprite $1
+|80 @Controller &vector $2 &button $1 &key $1
 |a0 @File1 &vector $2 &success $2 &stat $2 &delete $1 &append $1 &name $2 &length $2 &read $2 &write $2
 
 |00
@@ -18,11 +19,19 @@
 	#e006 .System/b DEO2
 	theme
 	#00 .wlen STZ
-	;on-char .Console/vector DEO2
+	;on-console .Console/vector DEO2
+	;on-key .Controller/vector DEO2
 	BRK
 
-@on-char ( -> )
-	.Console/read DEI
+@on-console ( -> )
+	.Console/read DEI !on-char
+
+@on-key ( -> )
+	.Controller/key DEI
+	DUP #0d EQU ?on-char/new-line
+	!on-char
+
+@on-char ( c -> )
 	DUP #0a EQU ?&new-line
 	DUP is-space ?&space
 	DUP #20 GTH ?{ POP BRK }
@@ -44,7 +53,8 @@
 &new-line ( c -> )
 	POP got-word draw/new-line BRK
 &dot ( c -> )
-	POP got-word [ LIT2 00 -space ] STZ ;dict/dot LDA draw BRK
+	POP got-word
+	[ LIT2 00 -space ] STZ ;dict/dot LDA draw BRK
 &lit ( c -> )
 	POP draw-letters BRK
 &te ( c -> )
@@ -130,7 +140,6 @@
 	.Screen/y DEI2k #000a ADD2 ROT DEO2
 	JMP2r
 
-( stolen from neauoire )
 @theme ( -- )
 	;&file .File1/name DEO2
 	#0002 .File1/length DEO2
